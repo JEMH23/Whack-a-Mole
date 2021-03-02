@@ -1,0 +1,63 @@
+/* 
+  Couleurs
+  Orange : rgb(255, 165, 0)
+  Orange foncé : rgb(255, 123, 0)
+  Vert : rgb(1, 127, 126)
+*/
+
+/* Conteneur principal */
+#main {
+  background-image:url(../img/bandeau.jpg); 
+  background-size:100%;
+  background-repeat:no-repeat ;
+  min-height:1000px;
+  min-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Conteneur des trous de taupes */
+#holes-and-moles {
+position:absolute;
+bottom:20px;
+width:100%;
+}
+
+/* Conteneur du score */
+#score-container {
+background-color: orange;
+border: 1px solid black;
+}
+
+/* Les trous de taupes */
+.hole {
+  background-image: url(../img/dirt.png); 
+  background-size: 100%;
+  background-repeat:no-repeat ;
+  width: 200px;
+  height:200px;
+  margin: auto;
+  position:relative;
+  overflow: hidden;
+  z-index: auto;
+}
+
+/* Les taupes */
+.mole {
+  display:inline-block; 
+  cursor: grab;
+  background-image: url(../img/mole.png);
+  background-size:50px;
+  background-repeat:no-repeat ;
+  width:100px;
+  height:100px;
+  position:relative;
+  z-index:auto;
+  bottom:100%;
+  transition-delay: 1s;
+}
+
+/* Les taupes visibles */
+.hole.up .mole {
+  bottom:0px;
+}
